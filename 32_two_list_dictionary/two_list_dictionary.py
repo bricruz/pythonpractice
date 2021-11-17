@@ -11,7 +11,20 @@ def two_list_dictionary(keys, values):
         {'a': 1, 'b': 2, 'c': 3, 'd': None}
     
     If there are fewer keys, ignore remaining values:
-
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
-   """
+    """
+    newdict = {}
+    for i in range(len(keys)):
+        if len(values) < len(keys):
+            if i < len(values):
+                newdict.update({keys[i]:values[i]})
+            else:
+                newdict.update({keys[i]:None})
+        else:
+            newdict.update({keys[i]:values[i]})
+
+        
+    return newdict
+
+print(two_list_dictionary(['a','b','c','d'],[1,2,3,4,5]))
