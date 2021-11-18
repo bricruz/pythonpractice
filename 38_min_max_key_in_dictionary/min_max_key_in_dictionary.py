@@ -9,3 +9,15 @@ def min_max_keys(d):
         >>> min_max_keys({"apple": "red", "cherry": "red", "berry": "blue"})
         ('apple', 'cherry')
     """
+    dlist = list(d)
+    dtup = tuple(dlist)
+    maxi = max(dtup)
+    mini = min(dtup)
+    minmaxtup = (mini,maxi)
+
+    print(minmaxtup)
+
+    
+
+
+min_max_keys({"apple": "red", "cherry": "red", "berry": "blue"})
